@@ -6,7 +6,7 @@ namespace VR2021.Locomotion
 {
     public class Locomotion : MonoBehaviour
     {
-        // Start is called before the first frame update
+        // Esta funcion no hace nada
         void Start()
         {
 
