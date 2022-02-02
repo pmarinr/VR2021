@@ -48,7 +48,6 @@ namespace VR2021.EquipoRojo
         public void Lost()
         {
             _currentScorePoints = 0;
-            
             highScoreText.enabled = true;
         }
 
