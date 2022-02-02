@@ -13,6 +13,7 @@ namespace VR2021.EquipoRojo
 
         void Start()
         {
+            _score = GameObject.FindObjectOfType<ScoreManager>();
             _inicialPosition = transform.position;
             _rigidbody = GetComponent<Rigidbody>();
         }
