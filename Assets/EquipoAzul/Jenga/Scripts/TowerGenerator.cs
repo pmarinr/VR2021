@@ -11,15 +11,18 @@ namespace VR2021.EquipoAzul
 
         [SerializeField]
         private Vector3 _tableOrigin;
+        
+        [SerializeField]
+        private int _rows;
 
-        private const float _pieceHeight = .1f;
-        private const float _pieceWidth = .2f;
+        private const float _pieceHeight = .105f;
+        private const float _pieceWidth = .205f;
 
         private void Start()
         {
             for (int pieceNumber = 0; pieceNumber < 3; pieceNumber++)
             {
-                for (int row = 0; row < 12; row++)
+                for (int row = 0; row < _rows; row++)
                 {
                     bool isRotated = false;
                     if (row % 2 == 1) { isRotated = true; }
@@ -28,11 +31,11 @@ namespace VR2021.EquipoAzul
 
                     if (isRotated)
                     {
-                        Instantiate(piece, NextPiecePosition(pieceNumber, row) + _tableOrigin, Quaternion.identity);
+                        Instantiate(piece, NextPiecePosition(pieceNumber, row) + _tableOrigin, Quaternion.identity, transform.GetChild(0));
                     }
                     else
                     {
-                        Instantiate(piece, NextPiecePosition(pieceNumber, row) + _tableOrigin, Quaternion.Euler(Vector3.up * 90));
+                        Instantiate(piece, NextPiecePosition(pieceNumber, row) + _tableOrigin, Quaternion.Euler(Vector3.up * 90), transform.GetChild(0));
                     }
                 }
             }
