@@ -18,11 +18,11 @@ namespace VR2021.demo
         }
         void OnEnable()
         {
-            EventManager.StartListening("puntuar", puntuar);
+            EventManager.StartListening("puntuar", OnPuntuar);
         }
 
       
-        private void puntuar(object obj)
+        private void OnPuntuar(object obj)
         {
             puntos += (int)obj;
             textoPuntos.text = puntos.ToString();

@@ -13,5 +13,10 @@ namespace VR2021.demo
             Debug.Log("puntuar");
             EventManager.TriggerEvent("puntuar", puntos);
         }
+
+        public void activar()
+        {
+            EventManager.TriggerEvent("activar_cubos");
+        }
     }
 }
