@@ -48,7 +48,7 @@ namespace VR2021.EquipoRojo
                 
             }
 
-            if (other.gameObject.layer == 1<<6)
+            if (other.transform.tag.Contains("EquipoRojoVaso"))
             {
                 GetComponent<Collider>().material.bounciness = 0f;
 
