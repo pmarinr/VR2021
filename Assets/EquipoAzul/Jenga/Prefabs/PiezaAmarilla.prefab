@@ -128,6 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clearMat: {fileID: 2100000, guid: a05ce984cf90ac74f87aa918c9fa814a, type: 2}
+  _myClearMat: {fileID: 2100000, guid: 4ac3f8a595d37ac49bfdc3dd023ea0eb, type: 2}
+  pieceColor: 2
 --- !u!114 &2196584833101774438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +243,7 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
-  m_RetainTransformParent: 1
+  m_RetainTransformParent: 0
   m_AttachPointCompatibilityMode: 0
 --- !u!114 &7046049644293795077
 MonoBehaviour:
