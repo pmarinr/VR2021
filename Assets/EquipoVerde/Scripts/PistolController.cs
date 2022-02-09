@@ -12,9 +12,15 @@ namespace VR2021.EquipoVerde
 
         [SerializeField] private Transform pistolNozzle;
 
+        [SerializeField] private Transform bulletParent;
+
         [SerializeField] private GameObject bullet;
 
+        [SerializeField] private float shootingCadence = 0.1f;
+
         private float triggerValue = 0f;
+
+        bool canShoot = true;
 
         void Start()
         {
@@ -28,7 +34,11 @@ namespace VR2021.EquipoVerde
 
         void Shoot()
         {
-            Instantiate(bullet, pistolNozzle);
+            Instantiate(bullet, pistolNozzle.position, pistolNozzle.rotation, bulletParent);
+
+            canShoot = false;
+
+            //StartCoroutine(ShootCooldown());
         }
 
         public void ControllerRightTrigger(InputAction.CallbackContext ctx)
@@ -39,10 +49,25 @@ namespace VR2021.EquipoVerde
 
             pistolAnimator.SetFloat("TriggerPull", triggerValue);
 
-            if (ctx.started)
+            if (ctx.ReadValue<float>() >= 0.85f)
             {
-                Shoot();
+                if (canShoot)
+                {
+                    Shoot();
+                }
             }
+
+            if(ctx.ReadValue<float>() <= 0.15f)
+            {
+                canShoot = true;
+            }
+        }
+
+        IEnumerator ShootCooldown()
+        {
+            yield return new WaitForSeconds(shootingCadence);
+
+            canShoot = true;
         }
     }
 }

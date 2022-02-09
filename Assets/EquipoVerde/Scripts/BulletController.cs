@@ -17,12 +17,20 @@ namespace VR2021.EquipoVerde
 
         void Start()
         {
-            bulletRigidbody.AddForce(0, bulletForce, 0);
+            bulletRigidbody.AddRelativeForce(new Vector3(0, 0, bulletForce), ForceMode.Impulse);
         }
 
         void Update()
         {
 
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            bulletRigidbody.velocity = Vector3.zero;
+
+            bulletRigidbody.isKinematic = true;
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
         }
     }
 }
