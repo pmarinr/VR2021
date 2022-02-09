@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 108837759}
   m_Layer: 0
   m_Name: BallPingPong
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -330,7 +330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108837752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.14, z: 0.713}
+  m_LocalPosition: {x: 0, y: 0.962, z: 0.713}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_Children: []
   m_Father: {fileID: 0}
@@ -364,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fedfe8a32220b42a710faddb49fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _layerMask: {fileID: 0}
   hitTable: 0
   tableHits: 0
   tableHitsNecesarios: 2
@@ -1052,6 +1053,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 811691823, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.555456
+      objectReference: {fileID: 0}
+    - target: {fileID: 811691823, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.225777
+      objectReference: {fileID: 0}
+    - target: {fileID: 811691823, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.555456
+      objectReference: {fileID: 0}
+    - target: {fileID: 811691823, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00056375
+      objectReference: {fileID: 0}
+    - target: {fileID: 811691823, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0381
+      objectReference: {fileID: 0}
+    - target: {fileID: 811691823, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.975
+      objectReference: {fileID: 0}
+    - target: {fileID: 543450652488883315, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 205.85858
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149578303948, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
       propertyPath: m_TagString
       value: EquipoRojo_TableHit
@@ -2803,21 +2832,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633106485}
   m_CullTransparentMesh: 1
---- !u!1 &1859996674 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149081752181, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
-  m_PrefabInstance: {fileID: 1130895013}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1859996675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859996674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49626f5a60d6984984f636c99331a89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materialSeleccion: {fileID: 2100000, guid: 28908524ddee81c4f8b4a035347a95c8, type: 2}

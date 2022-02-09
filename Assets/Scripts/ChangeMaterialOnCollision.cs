@@ -10,6 +10,8 @@ namespace VR2021
         {
             if (other.CompareTag("Player"))
             {
+                GetComponent<MeshCollider>().enabled = false;
+                GetComponent<CapsuleCollider>().enabled = false;
                 GetComponent<MeshRenderer>().material = materialSeleccion;
             }
         }
