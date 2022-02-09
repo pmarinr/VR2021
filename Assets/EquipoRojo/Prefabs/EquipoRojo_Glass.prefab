@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7428911332100983339}
   - component: {fileID: 8131634912110335263}
   - component: {fileID: 8131634912110335259}
+  - component: {fileID: 8783417854441639002}
   m_Layer: 6
   m_Name: EquipoRojo_Glass
   m_TagString: Untagged
@@ -111,3 +112,16 @@ CapsuleCollider:
   m_Height: 0.03
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8783417854441639002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8941957598503988222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49626f5a60d6984984f636c99331a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialSeleccion: {fileID: 2100000, guid: 28908524ddee81c4f8b4a035347a95c8, type: 2}

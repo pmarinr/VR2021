@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace VR2021.EquipoRojo
         private ScoreManager _scoreManager;
         private Vector3 _inicialPosition;
         private Rigidbody _rigidbody;
-        //[SerializeField] private GameObject _layerMask;
+        [SerializeField] private GameObject _layerMask;
 
         public bool hitTable;
         public int tableHits;
@@ -38,100 +39,44 @@ namespace VR2021.EquipoRojo
             }
         }
 
-       /* private void OnTriggerEnter(Collider other)
+       private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Pasa el trigger");
-            if (other.gameObject.layer == _layerMask.gameObject.layer)
-            {
-                Debug.Log("Pasa la layer");
-                
 
+            if (other.transform.tag.Contains("EquipoRojoVaso") || other.transform.CompareTag("EquipoRojo_TableHit"))
+            {
+                Puntua(other.gameObject);
             }
+        }
+
+
+       /* private void OnCollisionEnter(Collision col)
+        {
+
+            Puntua(col.gameObject);
         }*/
 
-
-        private void OnCollisionEnter(Collision col)
+        private void Puntua(GameObject gameObject)
         {
-
-            if (col.gameObject.CompareTag("EquipoRojo_TableHit"))
+            int points = 0;
+            if (gameObject.CompareTag("EquipoRojo_TableHit"))
             {
                 tableHits++;
-                if(tableHits == tableHitsNecesarios)
+                if (tableHits == tableHitsNecesarios)
                 {
                     hitTable = true;
                 }
-                
+
             }
 
-            if (col.gameObject.CompareTag("EquipoRojoVaso50"))
-            {
-                if (hitTable == true)
-                {
-                    _scoreManager.AddPoints(_scoreManager.pointValue*2);
-                    ReturnOrigen();
-                }
-                else
-                {
-                    _scoreManager.AddPoints(_scoreManager.pointValue);
-                    ReturnOrigen();
-                }
-            }
+            if (gameObject.CompareTag("EquipoRojoVaso50"))   points = _scoreManager.pointValue;
+            if (gameObject.CompareTag("EquipoRojoVaso100")) points = _scoreManager.pointValue * 2;
+            if (gameObject.CompareTag("EquipoRojoVaso150")) points = _scoreManager.pointValue * 3;
+            if (gameObject.CompareTag("EquipoRojoVaso200")) points = _scoreManager.pointValue * 4;
+            if (gameObject.CompareTag("EquipoRojoVaso300")) points = _scoreManager.pointValue * 6;
 
-            if (col.gameObject.CompareTag("EquipoRojoVaso100"))
-            {
-                if (hitTable == true)
-                {
-                    _scoreManager.AddPoints(_scoreManager.pointValue * 4);
-                    ReturnOrigen();
-                }
-                else
-                {
-                    _scoreManager.AddPoints(_scoreManager.pointValue * 2);
-                    ReturnOrigen();
-                }
-            }
-
-            if (col.gameObject.CompareTag("EquipoRojoVaso150"))
-            {
-                if (hitTable == true)
-                {
-                    _scoreManager.AddPoints(_scoreManager.pointValue * 6);
-                    ReturnOrigen();
-                }
-                else
-                {
-                    _scoreManager.AddPoints(_scoreManager.pointValue * 3);
-                    ReturnOrigen();
-                }
-            }
-
-            if (col.gameObject.CompareTag("EquipoRojoVaso200"))
-            {
-                if (hitTable == true)
-                {
-                    _scoreManager.AddPoints(_scoreManager.pointValue * 8);
-                    ReturnOrigen();
-                }
-                else
-                {
-                    _scoreManager.AddPoints(_scoreManager.pointValue * 4);
-                    ReturnOrigen();
-                }
-            }
-
-            if (col.gameObject.CompareTag("EquipoRojoVaso300"))
-            {
-                if (hitTable == true)
-                {
-                    _scoreManager.AddPoints(_scoreManager.pointValue * 12);
-                    ReturnOrigen();
-                }
-                else
-                {
-                    _scoreManager.AddPoints(_scoreManager.pointValue * 6);
-                    ReturnOrigen();
-                }
-            }
+            if (hitTable == true) points = points * 2;
+            _scoreManager.AddPoints(points);
+            Invoke("ReturnOrigen", 2);
         }
     }
 }

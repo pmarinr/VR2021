@@ -330,7 +330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108837752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.636, z: 0.713}
+  m_LocalPosition: {x: 0, y: 1.14, z: 0.713}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_Children: []
   m_Father: {fileID: 0}
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Camera: {fileID: 328857944}
   m_OriginBaseGameObject: {fileID: 482361774}
   m_CameraFloorOffsetObject: {fileID: 1346262822}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 1.1176
 --- !u!4 &482361777
 Transform:
@@ -1032,7 +1032,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843495048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.424}
+  m_LocalPosition: {x: 0, y: 0, z: 3.658}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 663418036}
@@ -1042,8 +1042,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.732}
-  m_SizeDelta: {x: 471, y: 265}
+  m_AnchoredPosition: {x: 0.0738, y: 1.604}
+  m_SizeDelta: {x: 302.2691, y: 141.6366}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1130895013
 PrefabInstance:
@@ -1066,7 +1066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2694851459797589570, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.622
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2694851459797589570, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1240,7 +1240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -18.6}
+  m_AnchoredPosition: {x: -54, y: 1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1195627825
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ---
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2701,9 +2701,9 @@ RectTransform:
   m_Father: {fileID: 663418036}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -166}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: -6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1633106487
@@ -2726,7 +2726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2803,3 +2803,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633106485}
   m_CullTransparentMesh: 1
+--- !u!1 &1859996674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149081752181, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
+  m_PrefabInstance: {fileID: 1130895013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1859996675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859996674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49626f5a60d6984984f636c99331a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialSeleccion: {fileID: 2100000, guid: 28908524ddee81c4f8b4a035347a95c8, type: 2}
