@@ -6,7 +6,7 @@ PhysicMaterial:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BallPong
+  m_Name: EquipoRojo_M_BallPong
   dynamicFriction: 100
   staticFriction: 100
   bounciness: 0.85
