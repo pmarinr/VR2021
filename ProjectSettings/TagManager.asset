@@ -9,6 +9,7 @@ TagManager:
   - EquipoRojoVaso150
   - EquipoRojoVaso200
   - EquipoRojoVaso300
+  - EquipoRojo_TableHit
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,6 @@ TagManager:
   - UI
   - EquipoRojoVaso
   - Teleport
-  - 
   - 
   - 
   - 

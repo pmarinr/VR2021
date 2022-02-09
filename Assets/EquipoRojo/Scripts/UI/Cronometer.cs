@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace VR2021.EquipoRojo
 {
@@ -15,10 +16,12 @@ namespace VR2021.EquipoRojo
             totalTime -= Time.deltaTime;
             time.text = "Time: " + Mathf.Floor(totalTime).ToString("00");
            
-            /*if (totalTime = 0)
+            if (totalTime <= 0f)
             {
-                SceneManager.LoadScene
-            }*/
+                time.enabled = false;
+                
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 }

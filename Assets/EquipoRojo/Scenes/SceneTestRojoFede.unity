@@ -136,8 +136,8 @@ GameObject:
   - component: {fileID: 108837755}
   - component: {fileID: 108837754}
   - component: {fileID: 108837758}
-  - component: {fileID: 108837759}
   - component: {fileID: 108837753}
+  - component: {fileID: 108837759}
   m_Layer: 0
   m_Name: BallPingPong
   m_TagString: Untagged
@@ -361,10 +361,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 108837752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a0cb3c0f25b4e34d8afe61f95aa90ce, type: 3}
+  m_Script: {fileID: 11500000, guid: b2fedfe8a32220b42a710faddb49fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _layerMask: {fileID: 0}
+  hitTable: 0
+  tableHits: 0
+  tableHitsNecesarios: 2
 --- !u!1 &135631545
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentscoreText: {fileID: 135631547}
   highScoreText: {fileID: 1633106487}
+  pointValue: 50
 --- !u!1 &831111460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1052,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 919132149578303948, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
+      propertyPath: m_TagString
+      value: EquipoRojo_TableHit
+      objectReference: {fileID: 0}
     - target: {fileID: 2694851459797589570, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1096,6 +1103,10 @@ PrefabInstance:
     - target: {fileID: 3327555064483923192, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
       propertyPath: m_Name
       value: BeerPongRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327555064483923192, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0bc492e9e244d43917cd882b96833a, type: 3}
@@ -1245,7 +1256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: {fileID: 1195627826}
-  totalTime: 60
+  totalTime: 15
 --- !u!114 &1195627826
 MonoBehaviour:
   m_ObjectHideFlags: 0

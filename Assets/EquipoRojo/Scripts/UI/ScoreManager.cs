@@ -10,7 +10,7 @@ namespace VR2021.EquipoRojo
     {
         public TextMeshProUGUI currentscoreText;
         public TextMeshProUGUI highScoreText;
-
+        public int pointValue = 50;
         private int _currentScorePoints;
 
         private void Start()
