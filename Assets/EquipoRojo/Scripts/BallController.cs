@@ -45,6 +45,13 @@ namespace VR2021.EquipoRojo
             if (other.transform.tag.Contains("EquipoRojoVaso") || other.transform.CompareTag("EquipoRojo_TableHit"))
             {
                 Puntua(other.gameObject);
+                
+            }
+
+            if (other.gameObject.layer == 1<<6)
+            {
+                GetComponent<Collider>().material.bounciness = 0f;
+
             }
         }
 

@@ -16,8 +16,8 @@ namespace VR2021.EquipoRojo
         private void Start()
         {
             _currentScorePoints = 0;
-            currentscoreText.text = "00";
-            highScoreText.text = PlayerPrefs.GetInt("HighScore", 00).ToString();
+            currentscoreText.text = "Score: " + "00";
+            highScoreText.text = "HighScore: " + PlayerPrefs.GetInt("HighScore", 00).ToString();
 
         }
         
