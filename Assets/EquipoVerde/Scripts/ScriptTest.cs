@@ -18,5 +18,10 @@ namespace VR2021.EquipoVerde
         {
 
         }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            print(transform.name);
+        }
     }
 }
