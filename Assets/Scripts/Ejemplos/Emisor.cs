@@ -18,5 +18,10 @@ namespace VR2021.demo
         {
             EventManager.TriggerEvent("activar_cubos");
         }
+
+        public void desactivar()
+        {
+            EventManager.TriggerEvent("desactivar_cubos", "Mensaje desactivar");
+        }
     }
 }

@@ -7,9 +7,11 @@ namespace VR2021
 {
     public class ReceptorCubo1 : MonoBehaviour
     {
+
         private void OnEnable()
         {
             EventManager.StartListening("puntuar", OnPuntuarCrecer);
+            
         }
 
         private void OnPuntuarCrecer(object obj)
@@ -18,10 +20,8 @@ namespace VR2021
             transform.localScale = transform.localScale * tam;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
+       
 
-        }
+
     }
 }
