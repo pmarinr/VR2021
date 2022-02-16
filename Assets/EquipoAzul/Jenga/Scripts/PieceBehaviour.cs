@@ -78,8 +78,16 @@ namespace VR2021.EquipoAzul
             if (!_deposited)
             {
                 StartCoroutine(FadeObject());
-                PointsManager.instance.AddPoints(_totalPoints);
-                _deposited = true;
+
+                if (other.CompareTag("Finish"))
+                {
+                    PointsManager.instance.GameOver();
+                }
+                else
+                {
+                    PointsManager.instance.AddPoints(_totalPoints, pieceColor);
+                    _deposited = true;
+                }
             }
         }
     }
