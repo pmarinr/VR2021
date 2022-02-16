@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Club
+  - ClubHit
+  - ClubLeft
+  - ClubRight
   layers:
   - Default
   - TransparentFX
@@ -13,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Teleport
-  - 
+  - GolfClub
   - 
   - 
   - 

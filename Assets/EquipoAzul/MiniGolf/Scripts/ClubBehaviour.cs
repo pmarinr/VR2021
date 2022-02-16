@@ -4,24 +4,19 @@ using UnityEngine;
 
 public class ClubBehaviour : MonoBehaviour
 {
-    private Rigidbody _rb;
+    public Rigidbody rb;
+    [SerializeField] private Rigidbody _hitRB;
+    [SerializeField] private Transform _hitPos;
     [SerializeField] private GameObject _club;
 
     private void Start()
     {
-        _rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.CompareTag("Club"))
-        {
-            _rb.AddForce(_club.transform.position, ForceMode.Impulse);
-        }
+        _hitRB.transform.position = _hitPos.transform.position;
+        _hitRB.rotation = _hitPos.rotation;
     }
 }
