@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace VR2021.EquipoVerde
 {
     public class GameManager : MonoBehaviour
     {
+        [SerializeField] private TextMeshProUGUI scoreText;
 
-        void Start()
+        private int score = 0;
+
+        public void AddScore(int points)
         {
+            score += points;
 
-        }
-
-        void Update()
-        {
-
+            scoreText.text = score.ToString();
         }
     }
 }

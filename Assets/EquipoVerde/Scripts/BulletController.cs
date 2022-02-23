@@ -18,19 +18,27 @@ namespace VR2021.EquipoVerde
         void Start()
         {
             bulletRigidbody.AddRelativeForce(new Vector3(0, 0, bulletForce), ForceMode.Impulse);
-        }
 
-        void Update()
-        {
-
+            StartCoroutine(DestroyGameobject());
         }
 
         private void OnCollisionEnter(Collision collision)
         {
             bulletRigidbody.velocity = Vector3.zero;
 
+            transform.parent = collision.transform;
+
+            bulletRigidbody.collisionDetectionMode = CollisionDetectionMode.Discrete;
             bulletRigidbody.isKinematic = true;
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+
+        IEnumerator DestroyGameobject()
+        {
+            yield return new WaitForSeconds(10f);
+
+            Destroy(gameObject);
         }
     }
 }
