@@ -16,8 +16,6 @@ namespace VR2021.EquipoVerde
 
         [SerializeField] private GameObject bullet;
 
-        [SerializeField] private float shootingCadence = 0.1f;
-
         private float triggerValue = 0f;
 
         bool canShoot = true;
@@ -26,25 +24,11 @@ namespace VR2021.EquipoVerde
 
         [SerializeField] AudioClip shootSound;
 
-        void Start()
-        {
-
-        }
-
-        void Update()
-        {
-            
-        }
-
         void Shoot()
         {
-            //audioSource.PlayOneShot(shootSound);
-
             Instantiate(bullet, pistolNozzle.position, pistolNozzle.rotation, bulletParent);
 
             canShoot = false;
-
-            //StartCoroutine(ShootCooldown());
         }
 
         public void ControllerRightTrigger(InputAction.CallbackContext ctx)
@@ -67,13 +51,6 @@ namespace VR2021.EquipoVerde
             {
                 canShoot = true;
             }
-        }
-
-        IEnumerator ShootCooldown()
-        {
-            yield return new WaitForSeconds(shootingCadence);
-
-            canShoot = true;
         }
     }
 }

@@ -9,9 +9,9 @@ namespace VR2021.EquipoVerde
     {
         [SerializeField] private TextMeshProUGUI scoreText;
 
-        private int score = 0;
+        private int score = 0;      //Almacena la puntuación de la partida
 
-        public bool gameEnded = true;
+        bool gameEnded = true;
 
         [SerializeField] private int secondsToPlay = 120;
 
@@ -29,6 +29,15 @@ namespace VR2021.EquipoVerde
             timeLeft = secondsToPlay;
         }
 
+        private void Update()
+        {
+            if (!gameEnded)
+            {
+                UpdateTimer();
+            }
+        }
+
+        //Actualiza la puntuación
         public void AddScore(int points)
         {
             if (!gameEnded)
@@ -39,20 +48,22 @@ namespace VR2021.EquipoVerde
             }
         }
 
-        private void Update()
-        {
-            if (!gameEnded)
-            {
-                UpdateTimer();
-            }
-        }
-
         public void StartGame()
         {
             gameEnded = false;
 
             targetSpawner.SetActive(true);
             duckSpawner.SetActive(true);
+        }
+
+        void EndGame()
+        {
+            gameEnded = true;
+
+            targetSpawner.SetActive(false);
+            duckSpawner.SetActive(false);
+
+            endCanvas.SetActive(true);
         }
 
         void UpdateTimer()
@@ -66,12 +77,7 @@ namespace VR2021.EquipoVerde
             {
                 timeLeft = 0;
 
-                gameEnded = true;
-
-                targetSpawner.SetActive(false);
-                duckSpawner.SetActive(false);
-
-                endCanvas.SetActive(true);
+                EndGame();
             }
 
             int timeInInt = (int)timeLeft;
