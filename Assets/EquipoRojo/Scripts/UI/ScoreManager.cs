@@ -16,8 +16,8 @@ namespace VR2021.EquipoRojo
         private void Start()
         {
             _currentScorePoints = 0;
-            currentscoreText.text = "00";
-            highScoreText.text = PlayerPrefs.GetInt("HighScore", 00).ToString();
+            currentscoreText.text = "Score: " + "00";
+            highScoreText.text = "HighScore: " + PlayerPrefs.GetInt("HighScore", 00).ToString();
 
         }
         
@@ -26,12 +26,12 @@ namespace VR2021.EquipoRojo
             highScoreText.enabled = false;
             _currentScorePoints += points;
             int number = _currentScorePoints;
-            currentscoreText.text = _currentScorePoints.ToString("00");
+            currentscoreText.text = "Score: " + _currentScorePoints.ToString("00");
 
             if (number > PlayerPrefs.GetInt("HighScore", 0))
             {
                 PlayerPrefs.SetInt("HighScore", number);
-                highScoreText.text = number.ToString();
+                highScoreText.text = "HighScore: " + number.ToString();
             }
             
         }
@@ -40,8 +40,8 @@ namespace VR2021.EquipoRojo
         {
             PlayerPrefs.DeleteAll();
             _currentScorePoints = 0;
-            highScoreText.text = "00";
-            currentscoreText.text = "00";
+            highScoreText.text = "HighScore: " + "00";
+            currentscoreText.text = "Score: " + "00";
             highScoreText.enabled = true;
         }
 
