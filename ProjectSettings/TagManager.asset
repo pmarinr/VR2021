@@ -10,6 +10,7 @@ TagManager:
   - EquipoRojoVaso200
   - EquipoRojoVaso300
   - EquipoRojo_TableHit
+  - EquipoRojoTableGlass
   layers:
   - Default
   - TransparentFX

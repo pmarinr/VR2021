@@ -18,7 +18,9 @@ namespace VR2021.EquipoRojo
 
         public AudioManager aM;
 
-        
+        private float timeToResetOrigenTableGlass;
+
+
 
         void Start()
         {
@@ -34,10 +36,12 @@ namespace VR2021.EquipoRojo
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.transform.Rotate(Vector3.zero);
             transform.Rotate(Vector3.zero);
+            GetComponent<Collider>().material.bounciness = 0.85f;
         }
 
         void Update()
         {
+            
             if (transform.position.y < -0.9f)
             {
                 ReturnOrigen();
@@ -46,7 +50,20 @@ namespace VR2021.EquipoRojo
             
         }
 
-       private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
+        {
+            if (other.CompareTag("EquipoRojoTableGlass"))
+            {
+                timeToResetOrigenTableGlass += Time.deltaTime;
+                if (timeToResetOrigenTableGlass > 3)
+                {
+                    ReturnOrigen();
+                    timeToResetOrigenTableGlass = 0;
+                }
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
         {
 
             if (other.transform.tag.Contains("EquipoRojoVaso") || other.transform.CompareTag("EquipoRojo_TableHit"))
@@ -62,6 +79,7 @@ namespace VR2021.EquipoRojo
                 aM.GlassHit();
 
             }
+            
 
         }
         private void OnCollisionEnter(Collision collision)
@@ -75,7 +93,8 @@ namespace VR2021.EquipoRojo
         {
 
             aM.Point();
-            aM.BallIn();
+            
+
 
             int points = 0;
             if (gameObject.CompareTag("EquipoRojo_TableHit"))
