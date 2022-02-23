@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bullet
+  - EquipoRojoVaso50
+  - EquipoRojoVaso100
+  - EquipoRojoVaso150
+  - EquipoRojoVaso200
+  - EquipoRojoVaso300
+  - EquipoRojo_TableHit
   layers:
   - Default
   - TransparentFX
@@ -12,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - EquipoRojoVaso
+  - Teleport
   - 
   - 
   - 
