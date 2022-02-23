@@ -6,7 +6,11 @@ namespace VR2021.EquipoVerde
 {
     public class TargetController : MonoBehaviour
     {
-        MeshCollider[] childrenMeshColliders; 
+        MeshCollider[] childrenMeshColliders;
+
+        public bool changeSize = false;
+
+        [SerializeField] Vector2 sizeRange;
 
         public void Score(int points)
         {
@@ -18,6 +22,15 @@ namespace VR2021.EquipoVerde
             //}
 
             FindObjectOfType<GameManager>().AddScore(points);
+        }
+
+        private void Start()
+        {
+            if (changeSize)
+            {
+                float newScale = Random.Range(sizeRange.x, sizeRange.y);
+                transform.localScale = new Vector3(newScale, newScale, newScale);
+            }
         }
     }
 }
