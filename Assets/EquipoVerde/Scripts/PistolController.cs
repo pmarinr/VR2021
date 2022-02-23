@@ -22,9 +22,13 @@ namespace VR2021.EquipoVerde
 
         bool canShoot = true;
 
+        [SerializeField] AudioSource audioSource;
+
+        [SerializeField] AudioClip shootSound;
+
         void Start()
         {
-        
+
         }
 
         void Update()
@@ -34,6 +38,8 @@ namespace VR2021.EquipoVerde
 
         void Shoot()
         {
+            //audioSource.PlayOneShot(shootSound);
+
             Instantiate(bullet, pistolNozzle.position, pistolNozzle.rotation, bulletParent);
 
             canShoot = false;
