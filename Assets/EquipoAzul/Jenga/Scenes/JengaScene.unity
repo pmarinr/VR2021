@@ -1705,7 +1705,7 @@ GameObject:
   - component: {fileID: 1322454529}
   - component: {fileID: 1322454528}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Arfombra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1781,12 +1781,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322454527}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.02, z: -0.34}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.477, y: 0.0111947125, z: -0.6}
   m_LocalScale: {x: 0.38590512, y: 0.23455, z: 0.23455}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 5210464151134856346}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1397099619
 GameObject:
@@ -6161,6 +6161,7 @@ Transform:
   - {fileID: 5446112568911229033}
   - {fileID: 4004064598840484010}
   - {fileID: 840700181901829957}
+  - {fileID: 1322454531}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
