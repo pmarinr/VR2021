@@ -4,6 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Club
+  - ClubHit
+  - ClubLeft
+  - ClubRight
+  - Ball
   - EquipoRojoVaso50
   - EquipoRojoVaso100
   - EquipoRojoVaso150
@@ -20,8 +25,8 @@ TagManager:
   -
   - Water
   - UI
-  - 
-  - 
+  - Teleport
+  - GolfClub
   - 
   - 
   - 
