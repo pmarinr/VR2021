@@ -11,11 +11,13 @@ TagManager:
   - EquipoRojoVaso300
   - EquipoRojo_TableHit
   - EquipoRojoTableGlass
+  - Bullet
+  - DuckRemover
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  -
   - Water
   - UI
   - EquipoRojoVaso
