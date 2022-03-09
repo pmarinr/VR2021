@@ -8,10 +8,10 @@ namespace VR2021.Events
 
     public static class EventNames
     {
-        public const string IniciaNivel = "newLevel";
-        public const string FinNivel = "endLevel";
-        public const string PausaJuego = "pause";
-        public const string ReiniciaJuego = "restart";  
+        public const string NewLevel = "newLevel";
+        public const string EndLevel = "endLevel";
+        public const string Pause = "pause";
+        public const string Restart = "restart";  
     }
    /// <summary>
     /// Messaging System which will allow objects to subscribe to events, having associated callbacks.

@@ -9,11 +9,20 @@ TagManager:
   - ClubLeft
   - ClubRight
   - Ball
+  - EquipoRojoVaso50
+  - EquipoRojoVaso100
+  - EquipoRojoVaso150
+  - EquipoRojoVaso200
+  - EquipoRojoVaso300
+  - EquipoRojo_TableHit
+  - EquipoRojoTableGlass
+  - Bullet
+  - DuckRemover
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  -
   - Water
   - UI
   - Teleport
