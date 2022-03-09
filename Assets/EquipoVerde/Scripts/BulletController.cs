@@ -10,6 +10,10 @@ namespace VR2021.EquipoVerde
 
         private Rigidbody bulletRigidbody;
 
+        [SerializeField] AudioSource audioSource;
+
+        [SerializeField] AudioClip shootSound;
+
         private void Awake()
         {
             bulletRigidbody = GetComponent<Rigidbody>();
@@ -32,6 +36,8 @@ namespace VR2021.EquipoVerde
             bulletRigidbody.isKinematic = true;
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
             gameObject.GetComponent<BoxCollider>().enabled = false;
+
+            audioSource.PlayOneShot(shootSound);
         }
 
         IEnumerator DestroyGameobject()
