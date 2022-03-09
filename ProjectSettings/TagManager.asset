@@ -4,22 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
   - EquipoRojoVaso50
   - EquipoRojoVaso100
   - EquipoRojoVaso150
   - EquipoRojoVaso200
   - EquipoRojoVaso300
   - EquipoRojo_TableHit
-=======
+  - EquipoRojoTableGlass
   - Bullet
   - DuckRemover
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  -
   - Water
   - UI
   - EquipoRojoVaso
