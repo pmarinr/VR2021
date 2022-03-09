@@ -16,6 +16,7 @@ public class HolesManager : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
+            print("BallIN");
             _nextHole._completedHole = true;
         }
     }
